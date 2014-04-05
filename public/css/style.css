@@ -1,0 +1,61 @@
+body {
+  background-color: #eee;
+}
+
+.notebook {
+  height: 100px;
+  margin-bottom: 10px;
+  float: left !important;
+  padding-left: 0px;
+}
+
+.notebook .whitebox {
+  height: 100%;
+  margin-right: 5px;
+}
+
+.notebook .whitebox:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.note {
+  margin-bottom: 10px;
+}
+
+input.note-title {
+  font-size: 1.6875rem;
+  border: 0;
+  box-shadow: 0px 0px 0px 0px;
+  -webkit-box-shadow: 0px 0px 0px 0px;
+}
+
+textarea.note-content {
+  border: 0;
+  box-shadow: 0px 0px 0px 0px;
+  -webkit-box-shadow: 0px 0px 0px 0px;
+}
+
+.btns {
+  display: none;
+  width: 100%;
+}
+
+.whitebox {
+  padding: 10px;
+  background-color: #fff;
+}
+
+#modal {
+  z-index: 100;
+}
+
+.remove-notebook {
+  position:absolute;
+  bottom: 5;
+  right: 30;
+}
+
+.remove-notebook:hover {
+  text-decoration: underline;
+}

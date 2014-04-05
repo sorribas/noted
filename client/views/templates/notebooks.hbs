@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="row">
+    <h2>Notebooks</h2>
+  </div>
+
+  <div class="row">
+    <a id="add-notebook-link" class="button">New Notebook</a>
+  </div>
+
+  <div class="row">
+    {{#each notebooks}}
+    <div class="large-3 columns notebook" notebook-id="{{_id}}">
+      <div class="whitebox">
+        <h3>{{name}}</h3>
+        <i class="gen-enclosed foundicon-remove remove-notebook">Remove</i>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

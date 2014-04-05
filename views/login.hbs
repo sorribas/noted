@@ -1,0 +1,68 @@
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NotEd</title>
+    <link rel="stylesheet" href="/public/components/foundation/css/foundation.css" />
+    <script src="/public/components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    
+
+<!-- Navigation -->
+ 
+  <!-- End Top Bar -->
+
+  <!-- Header -->
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>NotEd</h1>
+    </div>
+    <div class="large-6 columns">
+      <h3>Login</h3>
+      <form action="/login" method="POST">
+        <input type="text" name="email" placeholder="Email" />
+        <input type="password" name="password" placeholder="Password"/>
+        <input type="submit" class="button" value="Login" />
+      </form>
+    </div>
+    <div class="large-6 columns">
+      <h3>Create account</h3>
+      <form action="/register" method="POST">
+        <input type="text" name="email" placeholder="Email" />
+        <input type="password" name="password" placeholder="Password"/>
+        <input type="password" name="confirmPassword" placeholder="Confirm Password"/>
+        <input type="submit" class="button" value="Register" />
+      </form>
+    </div>
+
+  </div>
+
+  <!-- End Header -->
+
+  <!-- Footer -->
+
+  <footer class="row">
+  <div class="large-12 columns"><hr />
+      <div class="row">
+
+        <div class="large-6 columns">
+            <p>&copy; Copyright Eduardo Sorribas 2014</p>
+        </div>
+
+      </div>
+  </div>
+  </footer>
+
+
+    <script src="/public/components/jquery/dist/jquery.js"></script>
+    <script src="/public/components/foundation/js/foundation.js"></script>
+    <script>
+      $(document).foundation();
+
+      var doc = document.documentElement;
+      doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>
+  </body>
+</html>

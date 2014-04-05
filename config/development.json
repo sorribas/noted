@@ -1,0 +1,5 @@
+{
+  "mongo": "noted",
+  "secret": "dirtysecret",
+  "port": 4000
+}
