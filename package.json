@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-client": "browserify client/main.js -o public/js/bundle.js -t brfs",
-    "build": "bower install && npm run build-client",
+    "build": "bower install --allow-root && npm run build-client",
     "start": "node app",
     "start-dev": "npm run build-client && npm run start"
   },

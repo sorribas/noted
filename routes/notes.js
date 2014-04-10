@@ -1,4 +1,4 @@
-var getdb = require('../db');
+var getdb = require('../lib/db');
 
 exports.list = function(req, res) {
   var db = getdb(req.userId());

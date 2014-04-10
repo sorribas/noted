@@ -1,38 +1,9 @@
 var param = require('param');
-var root = require('root');
-var handlebars = require('handlebars');
-var send = require('send');
-var fs = require('fs');
 var crypto = require('crypto');
-var getdb = require('./db');
-var session = require('./session');
+var app = require('./lib/app');
+var getdb = require('./lib/db');
 var notebooks = require('./routes/notebooks');
 var notes = require('./routes/notes');
-
-var app = root();
-
-var templates = {};
-app.use('response.render', function(file, vars) {
-  var res = this;
-
-  if (templates[file]) return res.send(templates[file](vars));
-
-  fs.readFile('./views/' + file, {encoding: 'utf8'}, function(err, data) {
-    templates[file] = handlebars.compile(data);
-    res.send(templates[file](vars));
-  });
-});
-
-app.use('response.session', session.set);
-app.use('request.session', session.get);
-
-app.use('request.userId', function() {
-  return this.session('user');
-});
-
-app.get("/public/*", function(req, res) {
-	send(req, __dirname+'/public/'+req.params.glob).pipe(res);
-});
 
 app.get('/login', function(req, res) {
   res.render('login.hbs');
