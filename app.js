@@ -30,6 +30,7 @@ app.post('/register', function(req, res) {
       password: pass
     }, function(err, usr) {
       if (err) return res.error(500, err.toString());
+      res.session('user', usr._id.toString());
       res.redirect('/');
     });
   });
