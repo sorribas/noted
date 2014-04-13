@@ -2,7 +2,7 @@ var getdb = require('../lib/db');
 
 exports.list = function(req, res) {
   var db = getdb(req.userId());
-  db.notebooks.find(function(err, notebooks) {
+  db.notebooks.find().sort({name: 1}, function(err, notebooks) {
     if (err) return res.error(500, err.toString());
     res.send(notebooks);
   });

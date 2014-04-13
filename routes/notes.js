@@ -2,7 +2,7 @@ var getdb = require('../lib/db');
 
 exports.list = function(req, res) {
   var db = getdb(req.userId());
-  db.notes.find({notebook_id: db.ObjectId(req.params.id)}, function(err, notes) {
+  db.notes.find({notebook_id: db.ObjectId(req.params.id)}).sort({updated: -1}, function(err, notes) {
     if (err) return res.error(500, err.toString());
     res.send(notes);
   });
@@ -35,7 +35,7 @@ exports.create = function(req, res) {
 
 exports.delete = function(req, res) {
   var db = getdb(req.userId());
-  db.notes.remove({_id: db.ObjectId(req.params.id)}, function() {
+  db.notes.remove({_id: db.ObjectId(req.params.id)}, function(err) {
     if (err) return res.error(500, err.toString());
     res.send({ok: true});
   });
