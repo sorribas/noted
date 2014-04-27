@@ -1,11 +1,14 @@
 <div class="row">
   <div class="large-9 columns note">
     <div class="whitebox">
-      <div><input type="text" value="{{title}}" class="note-title" placeholder="Title..."/></div>
+      <div>
+        <input type="text" value="{{title}}" class="note-title" placeholder="Title..."/>
+        <i class="gen-enclosed foundicon-remove remove-note"></i>
+      </div>
       <div><textarea class="note-content" placeholder="Content...">{{content}}</textarea></div>
-      <div class="btns">
-        <a class="button save-btn">Save</a>
-        <a class="button alert del-btn">Delete</a>
+      <div class="loading">
+        <img src="/public/img/load.gif" class="loader" alt="" />
+        <i class="gen-enclosed foundicon-checkmark note-saved"></i>
       </div>
     </div>
   </div>

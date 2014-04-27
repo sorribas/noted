@@ -1,3 +1,4 @@
+
 body {
   background-color: #eee;
 }
@@ -24,6 +25,8 @@ body {
 }
 
 input.note-title {
+  width: 95%;
+  display: inline;
   font-size: 1.6875rem;
   border: 0;
   box-shadow: 0px 0px 0px 0px;
@@ -59,4 +62,21 @@ textarea.note-content {
 
 .remove-notebook:hover {
   text-decoration: underline;
+}
+
+.remove-note {
+  float: right;
+  cursor: pointer;
+}
+
+.remove-note:hover {
+  text-decoration: underline;
+}
+
+.loader {
+  display: none;
+}
+
+.note-saved {
+  display: none;
 }

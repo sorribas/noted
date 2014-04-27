@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-client": "browserify client/main.js -o public/js/bundle.js -t brfs",
     "build": "bower install --allow-root && npm run build-client",
-    "start": "node app",
+    "start": "node server",
     "start-dev": "npm run build-client && npm run start"
   },
   "author": "Eduardo Sorribas <eduardo@sorribas.org> (http://sorribas.org/)",

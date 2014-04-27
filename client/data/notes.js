@@ -7,19 +7,19 @@ exports.list = function(id, cb) {
 };
 
 exports.create = function(note, cb) {
-  agent.post('/api/notes').send(note).end(function(err, res) {
+  agent.post('/api/notes').send(note).end(function(res) {
     cb(res.body);
   });
 };
 
 exports.update = function(note, cb) {
-  agent.put('/api/notes/' + note._id).send(note).end(function(err, res) {
+  agent.put('/api/notes/' + note._id).send(note).end(function(res) {
     cb(res.body);
   });
 };
 
 exports.del = function(note, cb) {
-  agent.del('/api/notes/' + note._id).end(function(err, res) {
+  agent.del('/api/notes/' + note._id).end(function(res) {
     cb(res.body);
   });
 };

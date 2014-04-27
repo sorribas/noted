@@ -8,46 +8,38 @@ Backbone.$ = jQuery;
 var NoteView = Backbone.View.extend({
 
   events: {
-    'focus .note-title': 'focus',
-    'blur .note-title': 'blur',
-    'focus .note-content': 'focus',
-    'blur .note-content': 'blur',
-    'click .save-btn': 'save',
-    'click .del-btn': 'delete'
+    'click .remove-note': 'delete'
   },
 
-  focus: function() {
-    this.focused = true;
-    this.$el.find('.btns').show();
+  loading: function() {
+    this.$el.find('.loader').show();
   },
 
-  blur: function() {
-    this.focused = false;
+  loaded: function() {
     var self = this;
+    self.$el.find('.loader').hide();
+    self.$el.find('.note-saved').show();
     setTimeout(function() {
-      if (!self.focused) self.$el.find('.btns').hide();
-    }, 100);
+      self.$el.find('.note-saved').hide();
+    }, 1000);
   },
 
   save: function() {
-    console.log('1');
-    this.focused = true;
-    this.$el.find('.save-btn').show();
-    var self = this;
-
+    this.loading();
     this.model.title = this.$el.find('.note-title').val();
     this.model.content = this.$el.find('.note-content').val();
 
-    if (!this.model._id) return notes.create(this.model, function() {
-      self.blur();
+    var self = this;
+    if (!this.model._id) return notes.create(this.model, function(note) {
+      self.model._id = note._id;
+      self.loaded();
     });
     notes.update(this.model, function() {
-      self.blur();
+      self.loaded();
     });
   },
 
   delete: function() {
-    console.log('2');
     if (this.model._id) {
       notes.del(this.model, function() {
       });
@@ -63,6 +55,16 @@ var NoteView = Backbone.View.extend({
   render: function() {
     this.$el.html(this.template(this.model));
     this.$el.find('textarea.note-content').autosize();
+    var self = this;
+
+    var typingHandler = {
+      stop: function() {
+        self.save()
+      },
+      delay: 500
+    };
+    this.$el.find('.note-title').typing(typingHandler);
+    this.$el.find('.note-content').typing(typingHandler);
   }
 });
 
