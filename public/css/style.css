@@ -67,6 +67,7 @@ textarea.note-content {
 .remove-note {
   float: right;
   cursor: pointer;
+  display: none;
 }
 
 .remove-note:hover {

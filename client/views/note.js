@@ -8,7 +8,17 @@ Backbone.$ = jQuery;
 var NoteView = Backbone.View.extend({
 
   events: {
-    'click .remove-note': 'delete'
+    'click .remove-note': 'delete',
+    'mouseover .whitebox': 'mouseover',
+    'mouseleave .whitebox': 'mouseleave'
+  },
+
+  mouseover: function() {
+    this.$el.find('.remove-note').show();
+  },
+
+  mouseleave: function() {
+    this.$el.find('.remove-note').hide();
   },
 
   loading: function() {
