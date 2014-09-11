@@ -1,0 +1,223 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900);
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../.rvm/gems/ruby-2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* login page */
+/* line 11, ../sass/screen.scss */
+.login, .signup {
+  padding: 20px 5%;
+}
+
+/* line 15, ../sass/screen.scss */
+html {
+  background: url("../../../img/noted_bg4.jpg") center center no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 23, ../sass/screen.scss */
+body {
+  font-family: "Source Sans Pro",Helvetica, Arial, sans-serif;
+  background: none;
+  /*reset foundation css */
+  font-weight: 400;
+  color: #333;
+}
+
+/* line 30, ../sass/screen.scss */
+.row .row {
+  margin: 0;
+  /*reset foundation css */
+}
+
+/* line 34, ../sass/screen.scss */
+[class*="column"] + [class*="column"]:last-child {
+  float: left;
+}
+
+/* line 38, ../sass/screen.scss */
+h1, h2, h3, h4, h5 {
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* line 44, ../sass/screen.scss */
+h1 {
+  font-size: 3rem;
+}
+
+/* line 48, ../sass/screen.scss */
+h2 {
+  font-size: 2.5rem;
+  line-height: 4.2rem;
+  color: #fff;
+  border-top: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  margin: 20px 0;
+}
+
+/* line 57, ../sass/screen.scss */
+.remove-notebook, .remove-note {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+
+/* line 64, ../sass/screen.scss */
+.whitebox {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px 5%;
+  margin-bottom: 15px;
+}
+/* line 68, ../sass/screen.scss */
+.whitebox:hover .remove-notebook {
+  display: inline;
+}
+/* line 71, ../sass/screen.scss */
+.whitebox:hover {
+  background: white;
+}
+/* line 74, ../sass/screen.scss */
+.whitebox .note-content, .whitebox .note-title {
+  border: none;
+  box-shadow: none;
+}
+/* line 77, ../sass/screen.scss */
+.whitebox .note-content:focus, .whitebox .note-title:focus {
+  box-shadow: none;
+}
+/* line 80, ../sass/screen.scss */
+.whitebox .note-content:not(:focus), .whitebox .note-title:not(:focus) {
+  background: none;
+}
+/* line 84, ../sass/screen.scss */
+.whitebox .note-title {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+/* line 90, ../sass/screen.scss */
+.note-list > div {
+  float: left;
+}
+
+/* line 94, ../sass/screen.scss */
+.button {
+  background: none;
+  border: 1px solid #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: none;
+  float: right;
+}
+/* line 102, ../sass/screen.scss */
+.button:hover {
+  background: #333;
+  border-color: #333;
+}
+
+/* line 109, ../sass/screen.scss */
+#modal input:not(.focus) {
+  background: none;
+}
+/* line 112, ../sass/screen.scss */
+#modal .button {
+  color: #333;
+  border-color: #333;
+}
+/* line 115, ../sass/screen.scss */
+#modal .button:hover {
+  color: #fff;
+}
+/* line 119, ../sass/screen.scss */
+#modal h2 {
+  color: #333;
+}
+
+/* note autosave */
+/* line 124, ../sass/screen.scss */
+.loader {
+  display: none;
+}
+
+/* line 128, ../sass/screen.scss */
+.note-saved {
+  display: none;
+}
+
+/* line 132, ../sass/screen.scss */
+footer p {
+  color: #fff;
+}
