@@ -1,7 +1,7 @@
 var agent = require('superagent');
 
 exports.list = function(id, cb) {
-  agent.get('/api/notebooks/' + id).end(function(res) {
+  agent.get('/api/notes/?notebookId=' + id).end(function(res) {
     cb(res.body);
   });
 };
