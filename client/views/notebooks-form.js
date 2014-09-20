@@ -9,7 +9,14 @@ var NotebooksFormView = Backbone.View.extend({
   el: '#modal',
   events: {
     'click #save-notebook-button': 'clickAddButton',
-    'close': 'close'
+    'close': 'close',
+    'keyup input[name="name"]': 'keyup'
+  },
+
+  keyup: function(e) {
+    if(e.keyCode == 13) {
+      this.clickAddButton();
+    }
   },
 
   close: function() {
@@ -20,7 +27,9 @@ var NotebooksFormView = Backbone.View.extend({
     var self = this;
     notebooks.create({name: this.$el.find('input').val()}, function() {
       self.$el.foundation('reveal', 'close');
-      main.app.navigate('', {trigger: true});
+      setTimeout(function() {
+        main.app.navigate('', {trigger: true});
+      }, 0);
     });
   },
 
@@ -30,6 +39,10 @@ var NotebooksFormView = Backbone.View.extend({
   render: function() {
     this.$el.html(this.template());
     this.$el.foundation('reveal', 'open');
+    var self = this;
+    setTimeout(function() {
+      self.$el.find('input').focus();
+    }, 200);
   }
 });
 
