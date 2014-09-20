@@ -1,0 +1,158 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900);
+
+
+/*reset foundation css */
+
+.row .row{
+  margin:0;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+  box-shadow: none;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+[class*="column"] + [class*="column"]:last-child {
+  float: left;
+}
+
+/* login page */
+
+.login, .signup{
+  padding: 80px 4% 20px;
+}
+
+/* notebooks, note page */
+
+
+html{
+  background: url("../../../img/noted_bg4.jpg") center center no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-size: 15px;
+}
+
+body {
+  font-family: "Source Sans Pro",Helvetica, Arial, sans-serif;
+  background: none; /*reset foundation css */
+  font-weight:400;
+  color: #333;
+}
+
+
+h1, h2, h3, h4, h5{
+  font-weight: 900;
+  letter-spacing:0.2em;
+  color: #fff;
+  text-transform: uppercase;
+}
+h1{
+  font-size: 3rem;
+}
+
+h3{
+  font-size: 2rem;
+  padding: 10px 0;
+}
+
+h2{
+  font-size:2.5rem;
+  line-height: 4.2rem;
+  color: #fff;
+  border-top: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  margin: 20px 0;
+}
+
+.remove-notebook, .remove-note{
+  display:none;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+
+.whitebox{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px 5%;
+  margin-bottom: 15px;
+  h3{
+    color: #333;
+    font-size: 1.1rem;
+    padding: 0;
+  }
+  &:hover .remove-notebook{
+    display: inline;
+  }
+  &:hover{
+    background: rgba(255, 255, 255, 1)
+  }
+  .note-content, .note-title{
+    border: none;
+    box-shadow: none;
+    &:focus{
+      box-shadow: none;
+    }
+    &:not(:focus){
+      background: none;
+    }
+  }
+  .note-title{
+    font-weight: 900;
+    font-size:1.2em;
+  }
+}
+
+.note-list > div{
+  float: left;
+}
+
+.button{
+  background: none;
+  border: 1px solid #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: none;
+  float: right;
+  &:hover{
+    background: #333;
+    border-color: #333;
+  }
+}
+
+#modal{
+  input:not(.focus){
+    background: none;
+  }
+  .button{
+    color: #333;
+    border-color: #333;
+    &:hover{
+      color: #fff;
+    }
+  }
+  h2{
+  color: #333;
+  }
+}
+/* note autosave */
+.loader {
+  display: none;
+}
+
+.note-saved {
+  display: none;
+}
+
+footer p{
+  color: #fff;
+}
