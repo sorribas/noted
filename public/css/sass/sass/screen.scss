@@ -19,8 +19,18 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   padding: 5px;
 }
 
-[class*="column"] + [class*="column"]:last-child {
-  float: left;
+.button{
+  background: none;
+  border: 1px solid #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: none;
+  float: right;
+  &:hover{
+    background: #333;
+    border-color: #333;
+  }
 }
 
 /* login page */
@@ -29,7 +39,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   padding: 80px 4% 20px;
 }
 
-/* notebooks, note page */
+/* Base CSS */
 
 
 html{
@@ -73,17 +83,47 @@ h2{
   margin: 20px 0;
 }
 
+/* notebooks, note page */
+
+[class*="column"] + [class*="column"]:last-child {
+  float: left;
+}
+
+#main-content{
+  min-height:400px
+}
+
+.row{
+  padding: 0 10px;
+}
+
 .remove-notebook, .remove-note{
   display:none;
   position: absolute;
-  top: 5px;
-  right: 20px;
+  top: 10px;
+  right: 5%;
+  z-index:100;
+}
+.notebook .whitebox{
+  height: 150px;
+  display: table;
+  width: 100%;
+  h3{
+    display: table-cell; 
+    vertical-align: middle; 
+    position: relative;
+  }
+  
+}
+
+.notebook.column, .notebook.columns{
+  padding: 1px;
 }
 
 .whitebox{
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 15px 5%;
-  margin-bottom: 15px;
+  padding: 15px 10%;
+  margin-bottom: 1px;
   h3{
     color: #333;
     font-size: 1.1rem;
@@ -117,17 +157,12 @@ h2{
   margin: 0 auto;
 }
 
-.button{
-  background: none;
-  border: 1px solid #fff;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  transition: none;
-  float: right;
-  &:hover{
-    background: #333;
-    border-color: #333;
+footer{
+  p{
+  color: #fff;
+  margin: 0;
+  border-top: #fff solid 1px;
+  padding-top: 10px;
   }
 }
 
@@ -146,6 +181,10 @@ h2{
   color: #333;
   }
 }
+
+
+
+
 /* note autosave */
 .loader {
   display: none;
@@ -155,6 +194,4 @@ h2{
   display: none;
 }
 
-footer p{
-  color: #fff;
-}
+
