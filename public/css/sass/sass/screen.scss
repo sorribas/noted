@@ -16,7 +16,10 @@
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
   box-shadow: none;
   font-size: 1rem;
-  padding: 5px;
+  padding: 20px;
+  &:focus{
+    background: #fff;
+  }
 }
 
 .button{
@@ -28,8 +31,8 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   transition: none;
   float: right;
   &:hover{
-    background: #333;
-    border-color: #333;
+    background: #fff;
+    color: #333;
   }
 }
 
@@ -90,12 +93,13 @@ h2{
 }
 
 #main-content{
-  min-height:400px
+  min-height: 400px;
+  & > .row{
+    padding: 0 10px;
+  }  
 }
 
-.row{
-  padding: 0 10px;
-}
+
 
 .remove-notebook, .remove-note{
   display:none;
@@ -105,7 +109,7 @@ h2{
   z-index:100;
 }
 .notebook .whitebox{
-  height: 150px;
+  height: 130px;
   display: table;
   width: 100%;
   h3{
@@ -117,12 +121,16 @@ h2{
 }
 
 .notebook.column, .notebook.columns{
-  padding: 1px;
+  padding: 5px;
+}
+
+.note .whitebox{
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .whitebox{
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 15px 10%;
+  padding: 30px 10%;
   margin-bottom: 1px;
   h3{
     color: #333;
@@ -155,9 +163,14 @@ h2{
   width: 700px;
   max-width: 100%;
   margin: 0 auto;
+  .note.columns{
+    margin-bottom: 20px;
+    padding: 0;
+  }
 }
 
-footer{
+footer.row{
+  margin-top: 20px;
   p{
   color: #fff;
   margin: 0;
