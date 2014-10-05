@@ -15,7 +15,7 @@
 
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
   box-shadow: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding: 25px;
   border: #999 1px solid;
   font-family: "Source Sans Pro";
@@ -48,7 +48,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   letter-spacing: 0.2em;
   transition: none;
   float: right;
-  &:hover{
+  &:hover, &:focus{
     background: #fff;
     color: #333;
   }
@@ -73,23 +73,24 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     display: none;
   }
   input{
-    background: none;
+    background: #fff;
     border-color: #fff;
     transition: none;
-      &::-webkit-input-placeholder {
-       color: #fff;
+    color: #333;
+    &::-webkit-input-placeholder {
+       color: #333;
     }
     &:-moz-placeholder { /* Firefox 18- */
-       color: #fff;  
+       color: #333;  
     }
     &::-moz-placeholder {  /* Firefox 19+ */
-       color: #fff;  
+       color: #333;  
     }
     &:-ms-input-placeholder {  
-       color: #fff;  
+       color: #333;  
     }
     &:focus{
-      background-color: rgba(31,31,31,0.6);
+      background-color: #333;
       color: #fff;
       border-color: #333;
     }
@@ -101,7 +102,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     clear: both;
     color: #fff;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 1.2rem;
     padding-left: 20px;
     &:hover{
       color: #000;
@@ -273,8 +274,9 @@ footer.row{
   .button{
     color: #333;
     border-color: #333;
-    &:hover{
+    &:hover, &:focus{
       color: #fff;
+      background-color: #333;
     }
   }
   h2{
