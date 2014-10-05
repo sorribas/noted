@@ -77,15 +77,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 16, ../sass/screen.scss */
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
   box-shadow: none;
-  font-size: 1rem;
-  padding: 20px;
+  font-size: 1.5rem;
+  padding: 25px;
+  border: #999 1px solid;
+  font-family: "Source Sans Pro";
+  font-weight: 400;
 }
-/* line 20, ../sass/screen.scss */
+/* line 23, ../sass/screen.scss */
 input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus {
   background: #fff;
+  box-shadow: none;
+  border: #000;
+  border: #000 1px solid;
+}
+/* line 29, ../sass/screen.scss */
+input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="date"]::-webkit-input-placeholder, input[type="datetime"]::-webkit-input-placeholder, input[type="datetime-local"]::-webkit-input-placeholder, input[type="month"]::-webkit-input-placeholder, input[type="week"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="number"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="time"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #666;
+}
+/* line 32, ../sass/screen.scss */
+input[type="text"]:-moz-placeholder, input[type="password"]:-moz-placeholder, input[type="date"]:-moz-placeholder, input[type="datetime"]:-moz-placeholder, input[type="datetime-local"]:-moz-placeholder, input[type="month"]:-moz-placeholder, input[type="week"]:-moz-placeholder, input[type="email"]:-moz-placeholder, input[type="number"]:-moz-placeholder, input[type="search"]:-moz-placeholder, input[type="tel"]:-moz-placeholder, input[type="time"]:-moz-placeholder, input[type="url"]:-moz-placeholder, textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #666;
+}
+/* line 35, ../sass/screen.scss */
+input[type="text"]::-moz-placeholder, input[type="password"]::-moz-placeholder, input[type="date"]::-moz-placeholder, input[type="datetime"]::-moz-placeholder, input[type="datetime-local"]::-moz-placeholder, input[type="month"]::-moz-placeholder, input[type="week"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="number"]::-moz-placeholder, input[type="search"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, input[type="time"]::-moz-placeholder, input[type="url"]::-moz-placeholder, textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #666;
+}
+/* line 38, ../sass/screen.scss */
+input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="date"]:-ms-input-placeholder, input[type="datetime"]:-ms-input-placeholder, input[type="datetime-local"]:-ms-input-placeholder, input[type="month"]:-ms-input-placeholder, input[type="week"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="number"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="time"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #666;
 }
 
-/* line 25, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 .button {
   background: none;
   border: 1px solid #fff;
@@ -95,20 +119,86 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
   transition: none;
   float: right;
 }
-/* line 33, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 .button:hover {
   background: #fff;
   color: #333;
 }
 
 /* login page */
-/* line 41, ../sass/screen.scss */
-.login, .signup {
-  padding: 80px 4% 20px;
+/* line 59, ../sass/screen.scss */
+.login .logo-large {
+  max-width: 300px;
+  width: 300px;
+  height: 460px;
+  margin: 0 auto;
+  background: url(../../../img/noted_logo.png) center top no-repeat;
+}
+/* line 66, ../sass/screen.scss */
+.login .login, .login .signup {
+  width: 380px;
+  max-width: 100%;
+  margin: 0 auto;
+  float: none !important;
+}
+/* line 72, ../sass/screen.scss */
+.login h3 {
+  display: none;
+}
+/* line 75, ../sass/screen.scss */
+.login input {
+  background: none;
+  border-color: #fff;
+  transition: none;
+}
+/* line 79, ../sass/screen.scss */
+.login input::-webkit-input-placeholder {
+  color: #fff;
+}
+/* line 82, ../sass/screen.scss */
+.login input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff;
+}
+/* line 85, ../sass/screen.scss */
+.login input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+}
+/* line 88, ../sass/screen.scss */
+.login input:-ms-input-placeholder {
+  color: #fff;
+}
+/* line 91, ../sass/screen.scss */
+.login input:focus {
+  background-color: rgba(31, 31, 31, 0.6);
+  color: #fff;
+  border-color: #333;
+}
+/* line 97, ../sass/screen.scss */
+.login .button {
+  float: none;
+}
+/* line 100, ../sass/screen.scss */
+.login .showregister {
+  clear: both;
+  color: #fff;
+  font-weight: 900;
+  font-size: 2rem;
+  padding-left: 20px;
+}
+/* line 106, ../sass/screen.scss */
+.login .showregister:hover {
+  color: #000;
+}
+
+/* line 111, ../sass/screen.scss */
+.hidden {
+  display: none;
 }
 
 /* Base CSS */
-/* line 48, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 html {
   background: url("../../../img/noted_bg4.jpg") center center no-repeat fixed;
   -webkit-background-size: cover;
@@ -118,7 +208,7 @@ html {
   font-size: 15px;
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 body {
   font-family: "Source Sans Pro",Helvetica, Arial, sans-serif;
   background: none;
@@ -127,7 +217,7 @@ body {
   color: #333;
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 h1, h2, h3, h4, h5 {
   font-weight: 900;
   letter-spacing: 0.2em;
@@ -135,18 +225,18 @@ h1, h2, h3, h4, h5 {
   text-transform: uppercase;
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 h1 {
   font-size: 3rem;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 h3 {
   font-size: 2rem;
   padding: 10px 0;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 h2 {
   font-size: 2.5rem;
   line-height: 4.2rem;
@@ -157,21 +247,42 @@ h2 {
 }
 
 /* notebooks, note page */
-/* line 91, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
+.title-area {
+  position: fixed;
+  left: 0;
+  top: 20%;
+  padding: 10px;
+  background: #fff;
+}
+/* line 166, ../sass/screen.scss */
+.title-area a#app-name {
+  width: 40px;
+  height: 40px;
+  background: white url(../../../img/logo.png) top center;
+  overflow: hidden;
+  display: block;
+}
+/* line 172, ../sass/screen.scss */
+.title-area a#app-name:hover {
+  background-position: bottom center;
+}
+
+/* line 178, ../sass/screen.scss */
 [class*="column"] + [class*="column"]:last-child {
   float: left;
 }
 
-/* line 95, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 #main-content {
   min-height: 400px;
 }
-/* line 97, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 #main-content > .row {
   padding: 0 10px;
 }
 
-/* line 104, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 .remove-notebook, .remove-note {
   display: none;
   position: absolute;
@@ -180,85 +291,85 @@ h2 {
   z-index: 100;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .notebook .whitebox {
   height: 130px;
   display: table;
   width: 100%;
 }
-/* line 115, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 .notebook .whitebox h3 {
   display: table-cell;
   vertical-align: middle;
   position: relative;
 }
 
-/* line 123, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 .notebook.column, .notebook.columns {
   padding: 5px;
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .note .whitebox {
   background: rgba(255, 255, 255, 0.9);
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .whitebox {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 30px 10%;
   margin-bottom: 1px;
 }
-/* line 135, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 .whitebox h3 {
   color: #333;
   font-size: 1.1rem;
   padding: 0;
 }
-/* line 140, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 .whitebox:hover .remove-notebook {
   display: inline;
 }
-/* line 143, ../sass/screen.scss */
+/* line 230, ../sass/screen.scss */
 .whitebox:hover {
   background: white;
 }
-/* line 146, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 .whitebox .note-content, .whitebox .note-title {
   border: none;
   box-shadow: none;
 }
-/* line 149, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 .whitebox .note-content:focus, .whitebox .note-title:focus {
   box-shadow: none;
 }
-/* line 152, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
 .whitebox .note-content:not(:focus), .whitebox .note-title:not(:focus) {
   background: none;
 }
-/* line 156, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 .whitebox .note-title {
   font-weight: 900;
   font-size: 1.2em;
 }
 
-/* line 162, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
 .note-list > div {
   width: 700px;
   max-width: 100%;
   margin: 0 auto;
 }
-/* line 166, ../sass/screen.scss */
+/* line 253, ../sass/screen.scss */
 .note-list > div .note.columns {
   margin-bottom: 20px;
   padding: 0;
 }
 
-/* line 172, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 footer.row {
   margin-top: 20px;
 }
-/* line 174, ../sass/screen.scss */
+/* line 261, ../sass/screen.scss */
 footer.row p {
   color: #fff;
   margin: 0;
@@ -266,31 +377,31 @@ footer.row p {
   padding-top: 10px;
 }
 
-/* line 183, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 #modal input:not(.focus) {
   background: none;
 }
-/* line 186, ../sass/screen.scss */
+/* line 273, ../sass/screen.scss */
 #modal .button {
   color: #333;
   border-color: #333;
 }
-/* line 189, ../sass/screen.scss */
+/* line 276, ../sass/screen.scss */
 #modal .button:hover {
   color: #fff;
 }
-/* line 193, ../sass/screen.scss */
+/* line 280, ../sass/screen.scss */
 #modal h2 {
   color: #333;
 }
 
 /* note autosave */
-/* line 202, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 .loader {
   display: none;
 }
 
-/* line 206, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 .note-saved {
   display: none;
 }

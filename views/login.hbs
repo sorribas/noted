@@ -18,17 +18,19 @@
     <!-- Header -->
     <div class="row">
       <div class="large-12 columns">
-        <h1>NotEd</h1>
+        <div class="logo-large">
+        </div>
       </div>
-      <div class="large-6 medium-6 columns login">
+      <div class="large-12 columns login">
         <h3>Login</h3>
         <form action="/login" method="POST">
           <input type="text" name="email" placeholder="Email" />
           <input type="password" name="password" placeholder="Password"/>
           <input type="submit" class="button" value="Login" />
+          <a class="showregister"> or REGISTER</a>
         </form>
       </div>
-      <div class="large-6 medium-6 columns signup">
+      <div class="large-12 columns signup hidden">
         <h3>Create account</h3>
         <form action="/register" method="POST">
           <input type="text" name="email" placeholder="Email" />
@@ -60,6 +62,13 @@
 
       var doc = document.documentElement;
       doc.setAttribute('data-useragent', navigator.userAgent);
+
+      $(document).ready(function(){
+        $('.showregister').click(function(){
+          $('.login .login').hide();
+          $('.signup').fadeIn(500);
+        });
+      });
     </script>
   </body>
 </html>

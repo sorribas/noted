@@ -15,10 +15,28 @@
 
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
   box-shadow: none;
-  font-size: 1rem;
-  padding: 20px;
+  font-size: 1.5rem;
+  padding: 25px;
+  border: #999 1px solid;
+  font-family: "Source Sans Pro";
+  font-weight: 400;
   &:focus{
     background: #fff;
+    box-shadow: none;
+    border: #000;
+    border: #000 1px solid;
+  }
+  &::-webkit-input-placeholder {
+     color: #666;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+     color: #666;  
+  }
+  &::-moz-placeholder {  /* Firefox 19+ */
+     color: #666;  
+  }
+  &:-ms-input-placeholder {  
+     color: #666;  
   }
 }
 
@@ -37,11 +55,62 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 }
 
 /* login page */
-
-.login, .signup{
-  padding: 80px 4% 20px;
+.login{
+  .logo-large{
+    max-width: 300px;
+    width: 300px;
+    height: 460px;
+    margin: 0 auto;
+    background: url(../../../img/noted_logo.png) center top no-repeat;
+  }
+  .login, .signup{
+    width: 380px;
+    max-width: 100%;
+    margin: 0 auto;
+    float: none !important;
+  }
+  h3{
+    display: none;
+  }
+  input{
+    background: none;
+    border-color: #fff;
+    transition: none;
+      &::-webkit-input-placeholder {
+       color: #fff;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+       color: #fff;  
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: #fff;  
+    }
+    &:-ms-input-placeholder {  
+       color: #fff;  
+    }
+    &:focus{
+      background-color: rgba(31,31,31,0.6);
+      color: #fff;
+      border-color: #333;
+    }
+  }
+  .button{
+    float: none;
+  }
+  .showregister{
+    clear: both;
+    color: #fff;
+    font-weight: 900;
+    font-size: 2rem;
+    padding-left: 20px;
+    &:hover{
+      color: #000;
+    }
+  }
 }
-
+.hidden{
+  display:none;
+}
 /* Base CSS */
 
 
@@ -88,6 +157,24 @@ h2{
 
 /* notebooks, note page */
 
+.title-area{
+  position: fixed;
+  left: 0;
+  top: 20%;
+  padding: 10px;
+  background: #fff;
+  a#app-name{
+    width: 40px;
+    height: 40px;
+    background:#fff url(../../../img/logo.png) top center;
+    overflow: hidden;
+    display: block;
+    &:hover{
+      background-position: bottom center;
+    }
+  }
+}
+
 [class*="column"] + [class*="column"]:last-child {
   float: left;
 }
@@ -129,7 +216,7 @@ h2{
 }
 
 .whitebox{
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 30px 10%;
   margin-bottom: 1px;
   h3{
