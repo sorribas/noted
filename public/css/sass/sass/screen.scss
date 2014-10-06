@@ -16,11 +16,11 @@
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
   box-shadow: none;
   font-size: 1.2rem;
-  line-height:1.6em;
   border: #999 1px solid;
   font-family: "Source Sans Pro";
   font-weight: 400;
   transition: none;
+  height: 3rem;
   &:focus{
     background: #fff;
     box-shadow: none;
@@ -82,8 +82,6 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     border-color: #fff;
     color: #333;
     display: inline-block;
-    height: 3rem;
-    line-height: 3rem;
     &::-webkit-input-placeholder {
        color: #333;
     }
