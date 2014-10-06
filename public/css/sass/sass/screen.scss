@@ -16,15 +16,14 @@
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
   box-shadow: none;
   font-size: 1.2rem;
-  padding: 25px;
+  line-height:1.6em;
   border: #999 1px solid;
   font-family: "Source Sans Pro";
   font-weight: 400;
+  transition: none;
   &:focus{
     background: #fff;
     box-shadow: none;
-    border: #000;
-    border: #000 1px solid;
   }
   &::-webkit-input-placeholder {
      color: #666;
@@ -57,6 +56,9 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 }
 
 /* login page */
+.hidden{
+  display: none;
+}
 .login{
   .logo-large{
     padding-top: 40px;
@@ -78,8 +80,10 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   input{
     background: #fff;
     border-color: #fff;
-    transition: none;
     color: #333;
+    display: inline-block;
+    height: 3rem;
+    line-height: 3rem;
     &::-webkit-input-placeholder {
        color: #333;
     }
@@ -92,14 +96,10 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     &:-ms-input-placeholder {  
        color: #333;  
     }
-    &:focus{
-      background-color: #333;
-      color: #fff;
-      border-color: #333;
-    }
   }
   .button{
     float: none;
+    line-height: 1em;
   }
   .showregister, .showlogin{
     clear: both;
@@ -112,9 +112,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     }
   }
 }
-.hidden{
-  display:none;
-}
+
 /* Base CSS */
 
 
@@ -237,7 +235,6 @@ h2{
 .note .whitebox{
   background: rgba(255, 255, 255, 1);
   input, textarea{
-    padding: 15px;
     margin-bottom:0;
   }
   padding-bottom: 10px;
