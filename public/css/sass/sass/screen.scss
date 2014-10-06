@@ -41,7 +41,8 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 }
 
 .button{
-  background: none;
+  background: #fff;
+  color: #333;
   border: 1px solid #fff;
   font-weight: 900;
   text-transform: uppercase;
@@ -49,8 +50,9 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   transition: none;
   float: right;
   &:hover, &:focus{
-    background: #fff;
-    color: #333;
+    background: #333;
+    color: #fff;
+    border-color: #333;
   }
 }
 
@@ -157,8 +159,7 @@ h2{
   margin: 20px 0;
 }
 
-/* notebooks, note page */
-
+/* Side navigation */
 .title-area{
   position: fixed;
   left: 0;
@@ -189,6 +190,8 @@ h2{
     background-position: bottom center;
   }
 }
+
+/* notebooks, note page */
 
 [class*="column"] + [class*="column"]:last-child {
   float: left;
@@ -228,6 +231,11 @@ h2{
 
 .note .whitebox{
   background: rgba(255, 255, 255, 0.9);
+  input, textarea{
+    padding: 15px;
+    margin-bottom:0;
+  }
+  padding-bottom: 10px;
 }
 
 .whitebox{
