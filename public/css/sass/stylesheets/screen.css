@@ -265,14 +265,15 @@ h2 {
   background: white url(../../../img/small_logo.png) top center;
   overflow: hidden;
   display: block;
+  z-index: 10;
 }
-/* line 174, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 .title-area a#app-name:hover {
   background-position: bottom center;
   background-color: #333;
 }
 
-/* line 181, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .logout {
   position: fixed;
   top: 162px;
@@ -280,29 +281,30 @@ h2 {
   width: 60px;
   height: 60px;
   background: #333333 url(../../../img/exit.png) top center;
+  z-index: 10;
 }
-/* line 188, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .logout:hover {
   background-color: #fff;
   background-position: bottom center;
 }
 
 /* notebooks, note page */
-/* line 196, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 [class*="column"] + [class*="column"]:last-child {
   float: left;
 }
 
-/* line 200, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 #main-content {
   min-height: 400px;
 }
-/* line 202, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 #main-content > .row {
   padding: 0 10px;
 }
 
-/* line 209, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 .remove-notebook, .remove-note {
   display: none;
   position: absolute;
@@ -310,97 +312,97 @@ h2 {
   right: 5%;
   z-index: 100;
 }
-/* line 215, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 .remove-notebook:hover, .remove-note:hover {
   color: #00e2e5;
 }
 
-/* line 219, ../sass/screen.scss */
+/* line 221, ../sass/screen.scss */
 .notebook .whitebox {
   height: 130px;
   display: table;
   width: 100%;
 }
-/* line 223, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 .notebook .whitebox h3 {
   display: table-cell;
   vertical-align: middle;
   position: relative;
 }
 
-/* line 231, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 .notebook.column, .notebook.columns {
   padding: 5px;
 }
 
-/* line 235, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 .note .whitebox {
   background: white;
   padding-bottom: 10px;
 }
-/* line 237, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
 .note .whitebox input, .note .whitebox textarea {
   padding: 15px;
   margin-bottom: 0;
 }
 
-/* line 244, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 .whitebox {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 30px 10%;
   margin-bottom: 1px;
 }
-/* line 248, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 .whitebox h3 {
   color: #333;
   font-size: 1.1rem;
   padding: 0;
 }
-/* line 253, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 .whitebox:hover .remove-notebook {
   display: inline;
 }
-/* line 256, ../sass/screen.scss */
+/* line 258, ../sass/screen.scss */
 .whitebox:hover {
   background: white;
 }
-/* line 259, ../sass/screen.scss */
+/* line 261, ../sass/screen.scss */
 .whitebox .note-content, .whitebox .note-title {
   border: none;
   box-shadow: none;
 }
-/* line 262, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 .whitebox .note-content:focus, .whitebox .note-title:focus {
   box-shadow: none;
   border: none;
 }
-/* line 266, ../sass/screen.scss */
+/* line 268, ../sass/screen.scss */
 .whitebox .note-content:not(:focus), .whitebox .note-title:not(:focus) {
   background: none;
 }
-/* line 270, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 .whitebox .note-title {
   font-weight: 900;
   font-size: 1.2em;
 }
 
-/* line 276, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 .note-list > div {
   width: 800px;
   max-width: 100%;
   margin: 0 auto;
 }
-/* line 280, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 .note-list > div .note.columns {
   margin-bottom: 20px;
   padding: 0;
 }
 
-/* line 286, ../sass/screen.scss */
+/* line 288, ../sass/screen.scss */
 footer.row {
   margin-top: 20px;
 }
-/* line 288, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 footer.row p {
   color: #fff;
   margin: 0;
@@ -408,32 +410,32 @@ footer.row p {
   padding-top: 10px;
 }
 
-/* line 297, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 #modal input:not(.focus) {
   background: none;
 }
-/* line 300, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 #modal .button {
   color: #333;
   border-color: #333;
 }
-/* line 303, ../sass/screen.scss */
+/* line 305, ../sass/screen.scss */
 #modal .button:hover, #modal .button:focus {
   color: #fff;
   background-color: #333;
 }
-/* line 308, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 #modal h2 {
   color: #333;
 }
 
 /* note autosave */
-/* line 317, ../sass/screen.scss */
+/* line 319, ../sass/screen.scss */
 .loader {
   display: none;
 }
 
-/* line 321, ../sass/screen.scss */
+/* line 323, ../sass/screen.scss */
 .note-saved {
   display: none;
 }
