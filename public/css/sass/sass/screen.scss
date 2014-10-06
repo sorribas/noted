@@ -57,6 +57,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 /* login page */
 .login{
   .logo-large{
+    padding-top: 40px;
     max-width: 300px;
     width: 300px;
     height: 460px;
@@ -98,7 +99,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   .button{
     float: none;
   }
-  .showregister{
+  .showregister, .showlogin{
     clear: both;
     color: #fff;
     font-weight: 900;

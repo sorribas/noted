@@ -37,6 +37,7 @@
           <input type="password" name="password" placeholder="Password"/>
           <input type="password" name="confirmPassword" placeholder="Confirm Password"/>
           <input type="submit" class="button" value="Register" />
+          <a class="showlogin"> or LOGIN</a>
         </form>
       </div>
 
@@ -67,6 +68,11 @@
         $('.showregister').click(function(){
           $('.login .login').hide();
           $('.signup').fadeIn(500);
+        });
+
+        $('.showlogin').click(function(){
+          $('.signup').hide();
+          $('.login .login').fadeIn(500);
         });
       });
     </script>
