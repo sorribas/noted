@@ -162,18 +162,31 @@ h2{
 .title-area{
   position: fixed;
   left: 0;
-  top: 20%;
-  padding: 10px;
+  top: 100px;
   background: #fff;
   a#app-name{
-    width: 40px;
-    height: 40px;
-    background:#fff url(../../../img/logo.png) top center;
+    width: 60px;
+    height: 60px;
+    background:#fff url(../../../img/small_logo.png) top center;
     overflow: hidden;
     display: block;
     &:hover{
       background-position: bottom center;
+      background-color: #333;
     }
+  }
+}
+
+.logout{
+  position: fixed;
+  top: 162px;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: #333 url(../../../img/exit.png) top center;
+  &:hover{
+    background-color: #fff;
+    background-position: bottom center;
   }
 }
 
