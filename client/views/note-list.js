@@ -1,8 +1,10 @@
 var handlebars = require('handlebars');
 var fs = require('fs');
 var Backbone = require('backbone');
+var afterAll = require('after-all');
 var main = require('../main');
 var notes = require('../data/notes');
+var notebooks = require('../data/notebooks');
 var NoteView = require('./note');
 Backbone.$ = jQuery;
 
@@ -27,15 +29,29 @@ var NoteList = Backbone.View.extend({
   render: function(notebookId) {
     this.notebookId = notebookId;
     var self = this;
-    notes.list(notebookId, function(notes) {
+    var notebookResp;
+    var notesResp;
+
+    var done = function() {
       self.$el.html(self.template());
 
-      notes.forEach(function(note) {
+      notesResp.forEach(function(note) {
         var noteView = new NoteView({model: note});
         self.$el.find('.note-list').append(noteView.$el);
         noteView.render();
       });
-    });
+
+      self.$el.find('.notebook-title').html(notebookResp.name);
+    };
+    var next = afterAll(done);
+
+    notebooks.view(notebookId, next(function(notebook) {
+      notebookResp = notebook;
+    }));
+
+    notes.list(notebookId, next(function(notes) {
+      notesResp = notes;
+    }));
   }
 });
 

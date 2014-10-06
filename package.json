@@ -13,17 +13,18 @@
   "author": "Eduardo Sorribas <eduardo@sorribas.org> (http://sorribas.org/)",
   "license": "MIT",
   "dependencies": {
-    "root": "~0.6.2",
-    "mongojs": "~0.10.1",
-    "param": "~0.3.2",
-    "handlebars": "~2.0.0-alpha.2",
-    "send": "~0.2.0",
-    "browserify": "~3.32.0",
+    "after-all": "^2.0.1",
     "backbone": "~1.1.2",
     "brfs": "~1.0.0",
-    "superagent": "~0.17.0",
+    "browserify": "~3.32.0",
+    "handlebars": "~2.0.0-alpha.2",
+    "mongojs": "~0.10.1",
+    "noted-session": "0.0.2",
+    "param": "~0.3.2",
+    "root": "~0.6.2",
     "seaport": "^2.0.2",
-    "noted-session": "0.0.2"
+    "send": "~0.2.0",
+    "superagent": "~0.17.0"
   },
   "devDependencies": {
     "bower": "~1.3.1"
