@@ -310,93 +310,97 @@ h2 {
   right: 5%;
   z-index: 100;
 }
+/* line 215, ../sass/screen.scss */
+.remove-notebook:hover, .remove-note:hover {
+  color: #00e2e5;
+}
 
-/* line 216, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 .notebook .whitebox {
   height: 130px;
   display: table;
   width: 100%;
 }
-/* line 220, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 .notebook .whitebox h3 {
   display: table-cell;
   vertical-align: middle;
   position: relative;
 }
 
-/* line 228, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
 .notebook.column, .notebook.columns {
   padding: 5px;
 }
 
-/* line 232, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 .note .whitebox {
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   padding-bottom: 10px;
 }
-/* line 234, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 .note .whitebox input, .note .whitebox textarea {
   padding: 15px;
   margin-bottom: 0;
 }
 
-/* line 241, ../sass/screen.scss */
+/* line 244, ../sass/screen.scss */
 .whitebox {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 30px 10%;
   margin-bottom: 1px;
 }
-/* line 245, ../sass/screen.scss */
+/* line 248, ../sass/screen.scss */
 .whitebox h3 {
   color: #333;
   font-size: 1.1rem;
   padding: 0;
 }
-/* line 250, ../sass/screen.scss */
+/* line 253, ../sass/screen.scss */
 .whitebox:hover .remove-notebook {
   display: inline;
 }
-/* line 253, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 .whitebox:hover {
   background: white;
 }
-/* line 256, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .whitebox .note-content, .whitebox .note-title {
   border: none;
   box-shadow: none;
 }
-/* line 259, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 .whitebox .note-content:focus, .whitebox .note-title:focus {
   box-shadow: none;
   border: none;
 }
-/* line 263, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 .whitebox .note-content:not(:focus), .whitebox .note-title:not(:focus) {
   background: none;
 }
-/* line 267, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 .whitebox .note-title {
   font-weight: 900;
   font-size: 1.2em;
 }
 
-/* line 273, ../sass/screen.scss */
+/* line 276, ../sass/screen.scss */
 .note-list > div {
   width: 800px;
   max-width: 100%;
   margin: 0 auto;
 }
-/* line 277, ../sass/screen.scss */
+/* line 280, ../sass/screen.scss */
 .note-list > div .note.columns {
   margin-bottom: 20px;
   padding: 0;
 }
 
-/* line 283, ../sass/screen.scss */
+/* line 286, ../sass/screen.scss */
 footer.row {
   margin-top: 20px;
 }
-/* line 285, ../sass/screen.scss */
+/* line 288, ../sass/screen.scss */
 footer.row p {
   color: #fff;
   margin: 0;
@@ -404,32 +408,32 @@ footer.row p {
   padding-top: 10px;
 }
 
-/* line 294, ../sass/screen.scss */
+/* line 297, ../sass/screen.scss */
 #modal input:not(.focus) {
   background: none;
 }
-/* line 297, ../sass/screen.scss */
+/* line 300, ../sass/screen.scss */
 #modal .button {
   color: #333;
   border-color: #333;
 }
-/* line 300, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 #modal .button:hover, #modal .button:focus {
   color: #fff;
   background-color: #333;
 }
-/* line 305, ../sass/screen.scss */
+/* line 308, ../sass/screen.scss */
 #modal h2 {
   color: #333;
 }
 
 /* note autosave */
-/* line 314, ../sass/screen.scss */
+/* line 317, ../sass/screen.scss */
 .loader {
   display: none;
 }
 
-/* line 318, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 .note-saved {
   display: none;
 }

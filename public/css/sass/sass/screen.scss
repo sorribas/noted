@@ -212,6 +212,9 @@ h2{
   top: 10px;
   right: 5%;
   z-index:100;
+  &:hover{
+    color: #00e2e5;
+  }
 }
 .notebook .whitebox{
   height: 130px;
@@ -230,7 +233,7 @@ h2{
 }
 
 .note .whitebox{
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 1);
   input, textarea{
     padding: 15px;
     margin-bottom:0;
