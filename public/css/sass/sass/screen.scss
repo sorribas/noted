@@ -15,7 +15,7 @@
 
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
   box-shadow: none;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding: 25px;
   border: #999 1px solid;
   font-family: "Source Sans Pro";
@@ -236,6 +236,7 @@ h2{
     box-shadow: none;
     &:focus{
       box-shadow: none;
+      border: none;
     }
     &:not(:focus){
       background: none;
@@ -248,7 +249,7 @@ h2{
 }
 
 .note-list > div{
-  width: 700px;
+  width: 800px;
   max-width: 100%;
   margin: 0 auto;
   .note.columns{

@@ -77,7 +77,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 16, ../sass/screen.scss */
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
   box-shadow: none;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding: 25px;
   border: #999 1px solid;
   font-family: "Source Sans Pro";
@@ -343,34 +343,35 @@ h2 {
 /* line 237, ../sass/screen.scss */
 .whitebox .note-content:focus, .whitebox .note-title:focus {
   box-shadow: none;
+  border: none;
 }
-/* line 240, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 .whitebox .note-content:not(:focus), .whitebox .note-title:not(:focus) {
   background: none;
 }
-/* line 244, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 .whitebox .note-title {
   font-weight: 900;
   font-size: 1.2em;
 }
 
-/* line 250, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 .note-list > div {
-  width: 700px;
+  width: 800px;
   max-width: 100%;
   margin: 0 auto;
 }
-/* line 254, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 .note-list > div .note.columns {
   margin-bottom: 20px;
   padding: 0;
 }
 
-/* line 260, ../sass/screen.scss */
+/* line 261, ../sass/screen.scss */
 footer.row {
   margin-top: 20px;
 }
-/* line 262, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 footer.row p {
   color: #fff;
   margin: 0;
@@ -378,32 +379,32 @@ footer.row p {
   padding-top: 10px;
 }
 
-/* line 271, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 #modal input:not(.focus) {
   background: none;
 }
-/* line 274, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 #modal .button {
   color: #333;
   border-color: #333;
 }
-/* line 277, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 #modal .button:hover, #modal .button:focus {
   color: #fff;
   background-color: #333;
 }
-/* line 282, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
 #modal h2 {
   color: #333;
 }
 
 /* note autosave */
-/* line 291, ../sass/screen.scss */
+/* line 292, ../sass/screen.scss */
 .loader {
   display: none;
 }
 
-/* line 295, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 .note-saved {
   display: none;
 }
