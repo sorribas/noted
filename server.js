@@ -23,17 +23,31 @@ app.post('/login', function(req, res) {
 
 app.post('/register', function(req, res) {
   var db = getdb(req.userId());
-  req.on('form', function(form) {
-    var pass = crypto.createHash('sha1').update(form.email + form.password + param('salt')).digest('hex');
+
+  var onsave = function(err, usr) {
+    if (err) return res.error(500, err.toString());
+    res.session('user', usr._id.toString());
+    res.redirect('/');
+  };
+
+  var onfind = function(err, doc) {
+    if (err) return res.error(500, err.toString());
+    if (doc) {
+      res.statusCode = 400;
+      return res.render('login.hbs', {msg: 'Duplicate email.'});
+    }
     db.users.save({
       email: form.email,
       password: pass
-    }, function(err, usr) {
-      if (err) return res.error(500, err.toString());
-      res.session('user', usr._id.toString());
-      res.redirect('/');
-    });
-  });
+    }, onfind);
+  };
+
+  var onform = function(form) {
+    var pass = crypto.createHash('sha1').update(form.email + form.password + param('salt')).digest('hex');
+    db.users.find({email: form.email}, onfind);
+  };
+
+  req.on('form', onform);
 });
 
 app.all('*', function(req, res, next) {

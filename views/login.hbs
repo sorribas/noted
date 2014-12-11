@@ -9,10 +9,6 @@
     <script src="/public/components/modernizr/modernizr.js"></script>
   </head>
   <body class="login">
-      
-
-
-   
     <!-- End Top Bar -->
 
     <!-- Header -->
@@ -29,6 +25,15 @@
           <input type="submit" class="button" value="Login" />
           <a class="showregister"> or REGISTER</a>
         </form>
+
+        {{#if msg}}
+        <div class="large-12 columns login">
+          <div data-alert class="alert-box alert">
+            {{msg}}
+            <a href="#" class="close">&times;</a>
+          </div>
+        </div>
+        {{/if}}
         
       </div>
       <div class="large-12 columns signup hidden">
@@ -40,6 +45,15 @@
           <input type="submit" class="button" value="Register" />
           <a class="showlogin"> or LOGIN</a>
         </form>
+
+        {{#if msg}}
+        <div class="large-12 columns login">
+          <div data-alert class="alert-box alert">
+            {{msg}}
+            <a href="#" class="close">&times;</a>
+          </div>
+        </div>
+        {{/if}}
         
       </div>
 
